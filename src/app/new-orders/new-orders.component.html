@@ -1,0 +1,9 @@
+<ul class="products" *ngIf="products.length > 0">
+    <li *ngFor="let pr of products">
+        <input type="checkbox" [id]="pr.id">
+        <label [for]="pr.id">{{ pr.name }}</label>
+        <div class="product-info">
+            {{ 'Rs. ' + pr.subscriptionPrice  + ' ' + pr.subscriptionType }}
+        </div>
+    </li>
+</ul>
